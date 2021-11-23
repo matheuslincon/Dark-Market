@@ -1,24 +1,24 @@
 class ItemsController < ApplicationController
-  before_action :set_intem, only: %i[show edit update destroy]
+  before_action :set_item, only: %i[show edit update destroy]
 
   def index
-    @items = Intem.all
+    @items = Item.all
   end
 
   def show; end
 
   def new
-    @intem = Intem.new
+    @item = Item.new
   end
 
   def create
-    @intem = Intem.new(intem_params)
+    @item = Item.new(item_params)
   end
 
   def edit; end
 
   def update
-    if @intem.update(intem_params)
+    if @item.update(item_params)
       redirect_to @intem
     else
       render :edit
@@ -26,16 +26,16 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @intem = Intem.destroy
+    @item = Item.destroy
   end
 
   private
 
-  def set_intem
-    @intem = Intem.find(params[:id])
+  def set_item
+    @item = Item.find(params[:id])
   end
 
-  def intem_params
-    params.require(:intem).permit(:name, :price, :description)
+  def item_params
+    params.require(:item).permit(:name, :price, :description)
   end
 end
