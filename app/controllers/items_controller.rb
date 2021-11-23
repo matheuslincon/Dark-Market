@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to @intem
+      redirect_to @item
     else
       render :edit
     end
