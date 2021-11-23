@@ -13,5 +13,5 @@ User.create!(nickname: 'Mice', email: 'mice@test.com', password: '123123')
 User.create!(nickname: 'Mamma Bear', email: 'bear@test.com', password: '123123')
 
 Item.create!(name: 'Chain Saw', price: 500, description: 'okok', user_id: User.first)
-Item.create!(name: 'Axe', price: 500, description: 'okok', user_id: User.first)
-Item.create!(name: 'Sword', price: 500, description: 'okok', user_id: User.last)
+Item.create!(name: 'Axe', price: 600, description: 'okok', user_id: User.first)
+Item.create!(name: 'Sword', price: 1500, description: 'okok', user_id: User.last)
