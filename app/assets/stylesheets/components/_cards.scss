@@ -1,15 +1,18 @@
 .card-product {
   overflow: hidden;
   height: 120px;
-  background: rgba(155, 88, 127, 0.2);
+  background: rgba(36, 19, 29, 0.2);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin: 10px;
+
+
 }
 
 .card-product img {
-  height: 40%;
-  width: 40px;
+  height: 90%;
+  width: 90px;
   object-fit: cover;
 }
 
@@ -28,5 +31,5 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 10px;
 }
