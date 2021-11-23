@@ -236,7 +236,11 @@ GEM
 
 PLATFORMS
 <<<<<<< HEAD
+<<<<<<< HEAD
   x86_64-darwin-18
+=======
+  x86_64-darwin-19
+>>>>>>> 99e5254acbc51fd71e0904fc2d073056d1823311
 =======
   x86_64-darwin-19
 >>>>>>> 99e5254acbc51fd71e0904fc2d073056d1823311
