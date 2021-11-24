@@ -6,7 +6,6 @@
         <h3><%= "Name: #{item.name.capitalize}" %></h3>
         <p><%= "Price: $#{item.price},00" %></p>
         <p><%= "Description #{item.description.capitalize}" %></p>
-        <%= link_to 'Show', item %> |
         <%= link_to 'Edit', edit_item_path(item)%> |
         <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }%>
       </div>
