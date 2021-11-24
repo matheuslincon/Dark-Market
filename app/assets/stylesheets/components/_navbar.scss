@@ -1,12 +1,13 @@
-.navbar-lewagon {
+.navbar-darkmarket {
   justify-content: space-between;
-  background: transparent;
+  background: #5E2A4E;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-darkmarket .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-darkmarket .navbar-brand img {
+  padding: 5px;
+  width: 80px;
 }

@@ -1,0 +1,15 @@
+<div class="cards">
+  <% @items.each do |item| %>
+    <div class="card-product">
+      <img src="https://www.evilresource.com/images/data/full/remake/lighter.png?23294556" />
+      <div class="card-product-infos">
+        <h3><%= "Name: #{item.name.capitalize}" %></h3>
+        <p><%= "Price: $#{item.price},00" %></p>
+        <p><%= "Description #{item.description.capitalize}" %></p>
+        <%= link_to 'Show', item %> |
+        <%= link_to 'Edit', edit_item_path(item)%> |
+        <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }%>
+      </div>
+    </div>
+  <% end %>
+</div>
