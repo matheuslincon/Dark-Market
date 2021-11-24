@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: %i[show edit update destroy]
 
   def index
-    @items = Item.all
+    @items = Item.all.where(available: true)
   end
 
   def show; end
@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
     @item.user = current_user
 
     if @item.save
-      redirect_to @item, notice: 'Item was successfully created.'
+      redirect_to items_path, notice: 'Item was successfully created.'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to @item, notice: 'Item was successfully updated.'
+      redirect_to items_path, notice: 'Item was successfully updated.'
     else
       render :edit
     end
