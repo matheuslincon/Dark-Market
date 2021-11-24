@@ -1,7 +1,16 @@
 <%= render 'shared/navbar' %>
+<p>items created</p>
+<ul>
+  <% @my_items.each do |item| %>
+    <li><%= item.name %></li>
+  <% end %>
+</ul>
 
-items created
+<p>items bought</p>
+<ul>
+  <% @bought_items.each do |order| %>
+    <li><%= order.item.name %></li>
+  <% end %>
+</ul>
 
-items bought
-
-items sold
+<p>items sold</p>
