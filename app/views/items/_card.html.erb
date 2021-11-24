@@ -1,7 +1,7 @@
 <div class="cards" class="container">
   <% @items.each do |item| %>
     <div class="card-product">
-      <img src="https://www.evilresource.com/images/data/full/remake/lighter.png?23294556" />
+      <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill if item.photo.attached? %>
       <div class="card-product-infos">
         <h3><%= "Name: #{item.name.capitalize}" %></h3>
         <p><%= "Price: $#{item.price},00" %></p>
