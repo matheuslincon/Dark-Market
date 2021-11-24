@@ -1,6 +1,7 @@
 <h1>Buy stuff</h1>
 
 <%= link_to 'create', new_item_path %>
+<%= render "shared/slideshow" %>
 
 <table>
   <thead>
@@ -9,7 +10,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-  <%= render "shared/slideshow" %>
   <tbody>
     <% @items.each do |item| %>
       <tr>
