@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   def my_items
   @my_items = current_user.items
   @bought_items = current_user.orders
-  # @sold_items = @my_items.where.not(order: false)
+  @sold_items = @my_items.where(available: false)
   end
 end
