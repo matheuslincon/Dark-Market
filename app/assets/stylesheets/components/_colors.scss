@@ -1,0 +1,13 @@
+$purple: #7123E2;
+$gray: #A1A1A1;
+
+.dm-purple {
+  color: $purple !important;
+}
+
+.dm-gray {
+  color: $gray !important;
+  &:hover {
+    color: $purple !important;
+  }
+}
