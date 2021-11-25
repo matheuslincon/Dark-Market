@@ -1,11 +1,12 @@
-<div class="cards">
+<div class="conteiner d-flex flex-wrap">
   <% @items.each do |item| %>
-    <div class="card-product">
+    <div class="card mt-3 ml-2 mr-2 mb-3">
       <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill if item.photo.attached? %>
       <div class="card-product-infos">
-        <h3><%= "Name: #{item.name.capitalize}" %></h3>
+        <h3><%= "#{item.name.capitalize}" %></h3>
         <p><%= "Price: $#{item.price},00" %></p>
         <p><%= "Description #{item.description.capitalize}" %></p>
+        <p><%= "Price: $#{item.user},00" %></p>
         <%= link_to 'Edit', edit_item_path(item)%> |
         <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }%> |
         <%= link_to 'Order', item_orders_path(item), method: :post %>
