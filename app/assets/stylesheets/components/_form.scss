@@ -1,10 +1,9 @@
 .form-login {
   background: transparent;
-  padding: 10px 20px;
-  margin-top: 50px;
+  padding: 10px 10px;
+  margin-top: 10px;
   border-radius: 3px;
   box-shadow: 2px 2px 3px $purple;
-  text-align: center;
   font-family: $headers-font;
   letter-spacing: 1.5px;
   border: $purple solid 0.5px;
@@ -13,11 +12,21 @@
 
 .form-login-up {
   background: transparent;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin-top: 10px;
   border-radius: 3px;
   box-shadow: 2px 2px 3px $purple;
-  text-align: center;
+  font-family: $headers-font;
+  letter-spacing: 1.5px;
+  border: $purple solid 0.5px;
+  color: white;
+}
+.form-inputs {
+  background: transparent;
+  padding: 10px 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px $purple;
   font-family: $headers-font;
   letter-spacing: 1.5px;
   border: $purple solid 0.5px;

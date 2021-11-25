@@ -34,10 +34,11 @@ class ItemsController < ApplicationController
 
   def destroy
     if check_if_user
+      puts "=" * 50
       @item.destroy
-      redirect_to items_url, notice: 'Item was successfully destroyed.'
+      redirect_to items_path, notice: 'Item was successfully destroyed.'
     else
-      redirect_to intems_url, notice: 'You aren`t make this comand.'
+      redirect_to items_path, notice: 'You aren`t make this comand.'
     end
   end
 
