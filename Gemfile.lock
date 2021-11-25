@@ -235,16 +235,11 @@ GEM
     zeitwerk (2.5.1)
 
 PLATFORMS
-<<<<<<< HEAD
-<<<<<<< HEAD
-  x86_64-darwin-18
-=======
+  arm64-darwin-20
   x86_64-darwin-19
->>>>>>> 99e5254acbc51fd71e0904fc2d073056d1823311
-=======
-  x86_64-darwin-19
->>>>>>> 99e5254acbc51fd71e0904fc2d073056d1823311
   x86_64-darwin-20
+  x86_64-linux
+
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
