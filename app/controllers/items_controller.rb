@@ -2,7 +2,11 @@ class ItemsController < ApplicationController
   before_action :set_item, only: %i[show edit update destroy]
 
   def index
-    @items = Item.all.where(available: true)
+    if params[:query].present?
+      @item = Item.global_search(params[:query]).where(available: true)
+    else
+      @item = Item.all.where(available: true)
+    end
   end
 
   def show; end
@@ -34,10 +38,11 @@ class ItemsController < ApplicationController
 
   def destroy
     if check_if_user
+      puts "=" * 50
       @item.destroy
-      redirect_to items_url, notice: 'Item was successfully destroyed.'
+      redirect_to items_path, notice: 'Item was successfully destroyed.'
     else
-      redirect_to intems_url, notice: 'You aren`t make this comand.'
+      redirect_to items_path, notice: 'You aren`t make this comand.'
     end
   end
 

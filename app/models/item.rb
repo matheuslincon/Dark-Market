@@ -4,4 +4,14 @@ class Item < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
   has_one_attached :photo
+
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: [ :name, :categories, :description ],
+    associated_against: {
+      user: [ :nickname ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
 end

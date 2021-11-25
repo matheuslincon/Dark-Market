@@ -1,9 +1,17 @@
-<%# <div id="banner-home">
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-</div> %>
-<%= render 'shared/navbar' %>
-
-<div class="container d-flex">
-  <p>Welcome</p>
+<div id="home">
+  <div id="home-welcome">
+    <%= image_tag("logo.png", class:"logo-home")%>
+    <%= link_to new_user_session_path do%>
+      <h2 id="home-enter">ENTER</h2>
+    <% end %>
+     <%= link_to new_user_registration_path do%>
+      <h5 id="home-register">DON'T HAVE AN ACCOUNT? REGISTER HERE</h5>
+    <% end %>
+  </div>
+  <% if user_signed_in? %>
+    <%= link_to "LOGOUT", destroy_user_session_path, class:"home-logout", method: :delete %>
+  <% end %>
+  <div id="home-footer">
+    <p>LeWagon Batch #766 2021 - Eder Garbin | Fabricio Camargo | Matheus Andrade | Talita Layane</p>
+  </div>
 </div>
