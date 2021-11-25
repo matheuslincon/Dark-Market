@@ -2,7 +2,11 @@ class ItemsController < ApplicationController
   before_action :set_item, only: %i[show edit update destroy]
 
   def index
-    @items = Item.all.where(available: true)
+    if params[:query].present?
+      @item = Item.global_search(params[:query]).where(available: true)
+    else
+      @item = Item.all.where(available: true)
+    end
   end
 
   def show; end
