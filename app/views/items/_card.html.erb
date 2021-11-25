@@ -6,8 +6,10 @@
         <h3><%= "Name: #{item.name.capitalize}" %></h3>
         <p><%= "Price: $#{item.price}" %></p>
         <p><%= "Description #{item.description.capitalize}" %></p>
+        <% if current_user == item.user%>
         <%= link_to 'Edit', edit_item_path(item)%> |
-        <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }%> |
+        <%= link_to 'Destroy', item_path(item), method: :delete, data: { confirm: 'Are you sure?' }%> |
+        <% end %>
         <%= link_to 'Order', item_orders_path(item), method: :post %>
       </div>
     </div>
