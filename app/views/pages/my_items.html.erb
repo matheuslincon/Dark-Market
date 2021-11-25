@@ -1,23 +1,77 @@
 <%= render 'shared/navbar' %>
-<div class="container">
-  <p>items created</p>
-  <ul>
-    <% @my_items.each do |item| %>
-      <li><%= item.name %></li>
-    <% end %>
-  </ul>
+<div class="container mt-3" id="content">
+  <h3 class="text-white">Created Items</h3>
+  <table class="table table-dark table-hover text-center">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @my_items.each_with_index do |item, index| %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= item.name %></td>
+          <td><%= item.price %></td>
+        </tr>
+      <% end %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Total = $<%= @my_items.map { |item| item.price }.reduce(&:+) %></td>
+    </tr>
+    </tbody>
+  </table>
 
-  <p>items bought</p>
-  <ul>
-    <% @bought_items.each do |order| %>
-      <li><%= order.item.name %></li>
-    <% end %>
-  </ul>
+  <h3 class="text-white">Bought Items</h3>
+  <table class="table table-dark table-striped text-center">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bought_items.each_with_index do |order, index| %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= order.item.name %></td>
+          <td><%= order.item.price %></td>
+        </tr>
+      <% end %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Total = $<%= @bought_items.map { |order| order.item.price }.reduce(&:+) %></td>
+    </tr>
+    </tbody>
+  </table>
 
-  <p>items sold</p>
-  <ul>
-    <% @sold_items.each do |item| %>
-      <li><%= item.name %></li>
-    <% end %>
-  </ul>
+  <h3 class="text-white">Sold Items</h3>
+  <table class="table table-dark table-striped text-center">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @sold_items.each_with_index do |item, index| %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= item.name %></td>
+          <td><%= item.price %></td>
+        </tr>
+      <% end %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>Total = $<%= @sold_items.map { |item| item.price }.reduce(&:+) %></td>
+    </tr>
+    </tbody>
+  </table>
 </div>
