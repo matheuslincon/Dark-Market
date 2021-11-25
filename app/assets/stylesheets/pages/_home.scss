@@ -1,1 +1,40 @@
-// Specific CSS for your home-page
+#home {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  background-image: url("bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-home {
+  width: 400px;
+}
+
+#home-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home-welcome h2 {
+  font-family: 'Bebas Neue';
+}
+
+#home-footer {
+  color: rgba(255, 255, 255, 0.6);
+  // position: fixed;
+  // text-align: center;
+  // bottom: 10px;
+  // left: 25%;
+  //margin-top: 25%;
+  display: flex;
+  align-items: flex-end;
+}
