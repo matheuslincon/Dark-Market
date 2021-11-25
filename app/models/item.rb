@@ -6,8 +6,11 @@ class Item < ApplicationRecord
   has_one_attached :photo
 
   include PgSearch::Model
-  pg_search_scope :search,
-    against: [ :name, :categories ],
+  pg_search_scope :global_search,
+    against: [ :name, :categories, :description ],
+    associated_against: {
+      user: [ :nickname ]
+    },
     using: {
       tsearch: { prefix: true }
     }
