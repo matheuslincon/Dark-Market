@@ -33,11 +33,19 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy
-    redirect_to items_url, notice: 'Item was successfully destroyed.'
+    if check_if_user
+      @item.destroy
+      redirect_to items_url, notice: 'Item was successfully destroyed.'
+    else
+      redirect_to intems_url, notice: 'You aren`t make this comand.'
+    end
   end
 
   private
+
+  def check_if_user
+    @item.user == current_user
+  end
 
   def set_item
     @item = Item.find(params[:id])
