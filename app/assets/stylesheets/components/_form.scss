@@ -1,3 +1,50 @@
+.form-login {
+  background: transparent;
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px $purple;
+  text-align: center;
+  font-family: $headers-font;
+  letter-spacing: 1.5px;
+  border: $purple solid 0.5px;
+  color: white;
+}
+
+.form-login-up {
+  background: transparent;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px $purple;
+  text-align: center;
+  font-family: $headers-font;
+  letter-spacing: 1.5px;
+  border: $purple solid 0.5px;
+  color: white;
+}
+
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+
+}
+.btn {
+width: 100%;
+margin-top: 5px;
+margin-bottom: 20px;
+
+}
+.btn-purple {
+  background-color: $purple;
+  color: white;
+}
+
 .item-form {
   background-color: #F8F9FA;
   padding: 24px;
