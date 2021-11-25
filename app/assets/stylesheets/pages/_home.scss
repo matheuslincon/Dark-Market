@@ -15,26 +15,53 @@
 }
 
 .logo-home {
-  width: 400px;
+  width: 450px;
 }
 
 #home-welcome {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5%;
 }
 
-#home-welcome h2 {
+a {
+  text-decoration: none!important;
+}
+
+#home-enter {
   font-family: 'Bebas Neue';
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.1s ease-in-out;
+}
+
+#home-enter:hover {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+#home-register {
+  margin-top: 15px;
+  font-family: 'Bebas Neue';
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.1s ease-in-out;
+  border: solid rgba(255, 255, 255, 0.2) 1px;
+}
+
+#home-register:hover {
+  color: rgba(255, 255, 255, 0.8);
+  border: solid rgba(255, 255, 255, 0.4) 1px;
+}
+
+.home-logout {
+  font-family: 'Bebas Neue';
+  font-size: 1.5em;
+  color: rgba(69, 15, 56, 0.8);
 }
 
 #home-footer {
-  color: rgba(255, 255, 255, 0.6);
-  // position: fixed;
-  // text-align: center;
-  // bottom: 10px;
-  // left: 25%;
-  //margin-top: 25%;
-  display: flex;
-  align-items: flex-end;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 30px;
 }
