@@ -2,6 +2,7 @@
   "name": "dark-market",
   "private": true,
   "dependencies": {
+    "@popperjs/core": "^2.10.2",
     "@rails/actioncable": "^6.1.4",
     "@rails/activestorage": "^6.1.4",
     "@rails/ujs": "^6.1.4",
