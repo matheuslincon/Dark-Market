@@ -8,6 +8,9 @@ $gray: #A1A1A1;
 .dm-gray {
   color: $gray !important;
   &:hover {
-    color: $purple !important;
+    color: white !important;
+    background-color: $purple !important;
+    border-radius: 5px !important;
+    box-shadow: 0 10px 25px rgba(145, 92, 182, .4);
   }
 }

@@ -8,6 +8,9 @@
   letter-spacing: 1.5px;
   border: $purple solid 0.5px;
   color: white;
+  input {
+    font-family: $body-font;
+  }
 }
 
 .form-login-up {
@@ -20,6 +23,9 @@
   letter-spacing: 1.5px;
   border: $purple solid 0.5px;
   color: white;
+  input {
+    font-family: $body-font;
+  }
 }
 
 .form-inputs {
@@ -32,6 +38,12 @@
   letter-spacing: 1.5px;
   border: $purple solid 0.5px;
   color: white;
+  input {
+    font-family: $body-font;
+  }
+  textarea {
+    font-family: $body-font;
+  }
 }
 
 .item-form {
