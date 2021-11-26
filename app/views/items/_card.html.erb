@@ -1,17 +1,26 @@
 <div class="cards">
   <% @item.each do |item| %>
-    <div class="card-product">
-      <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill if item.photo.attached? %>
-      <div class="card-product-infos">
-        <h3><%= "Name: #{item.name.capitalize}" %></h3>
-        <p><%= "Price: $#{item.price}" %></p>
-        <p><%= "Description #{item.description.capitalize}" %></p>
-        <% if current_user == item.user%>
-        <%= link_to 'Edit', edit_item_path(item)%> |
-        <%= link_to 'Destroy', item_path(item), method: :delete, data: { confirm: 'Are you sure?' }%> |
-        <% end %>
-        <%= link_to 'Order', item_orders_path(item), method: :post %>
+
+      <div class="card shadow-sm border-0 rounded col-lg-3 ml-2 mb-4 p-2">
+        <div class="card-body p-0">
+          <%= cl_image_tag item.photo.key, class: "w-100 card-img-top", crop: :fill if item.photo.attached? %>
+          <div class="p-4">
+            <h4 class="mb-0"><%= "#{item.name.capitalize}" %></h4>
+            <h6 class="mb-0"><%= "Price: $#{item.price}" %></h6>
+            <p class="small text-muted"><%= "#{item.description.capitalize}" %></p>
+            <p>
+              <% if current_user == item.user%>
+             <i class="fas fa-edit"></i>
+              <%= link_to 'Edit', edit_item_path(item)%> |
+              <i class="fas fa-trash"></i>
+              <%= link_to 'Destroy', item_path(item), method: :delete, data: { confirm: 'Are you sure?' }%> |
+              <% end %>
+              <i class="fas fa-cart-plus"></i>
+              <%= link_to 'Order', item_orders_path(item), method: :post %>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+
   <% end %>
 </div>
