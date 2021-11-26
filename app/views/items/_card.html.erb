@@ -10,13 +10,13 @@
             <p class="small text-muted"><%= "#{item.description.capitalize}" %></p>
             <p>
               <% if current_user == item.user%>
-             <i class="fas fa-edit"></i>
-              <%= link_to 'Edit', edit_item_path(item)%> |
-              <i class="fas fa-trash"></i>
-              <%= link_to 'Destroy', item_path(item), method: :delete, data: { confirm: 'Are you sure?' }%> |
+             <i class="fas fa-edit card-icons"></i>
+              <%= link_to 'Edit', edit_item_path(item), class: "card-icons"%> |
+              <i class="fas fa-trash card-icons"></i>
+              <%= link_to 'Destroy', item_path(item), class: "card-icons", method: :delete, data: { confirm: 'Are you sure?' }%> |
               <% end %>
-              <i class="fas fa-cart-plus"></i>
-              <%= link_to 'Order', item_orders_path(item), method: :post %>
+              <i class="fas fa-cart-plus card-icons"></i>
+              <%= link_to 'Order', item_orders_path(item), class: "card-icons", method: :post %>
             </p>
           </div>
         </div>
